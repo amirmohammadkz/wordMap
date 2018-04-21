@@ -34,7 +34,7 @@ def get_root_of_sentence(sentence: str):
     result1 = do_all_to_text(sentence)
     result2 = normalize_and_stem_text(result1)
     result3 = delete_stop_words(result2)
-    return result1[0]
+    return result3[0]
 
 
 if __name__ == "__main__":

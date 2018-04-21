@@ -1,0 +1,61 @@
+train: clean    test:clean
+{'mirsalim': {'reisi': 38, 'hashemi_taba': 27, 'mirsalim': 116, 'rouhani': 9, 'ghalibaf': 13, 'jahangiri': 1}, 'hashemi_taba': {'jahangiri': 1, 'mirsalim': 55, 'hashemi_taba': 88, 'rouhani': 8, 'reisi': 42, 'ghalibaf': 1}, 'reisi': {'mirsalim': 37, 'reisi': 169, 'hashemi_taba': 37, 'rouhani': 13, 'jahangiri': 4, 'ghalibaf': 10}, 'jahangiri': {'ghalibaf': 12, 'reisi': 77, 'mirsalim': 61, 'rouhani': 41, 'jahangiri': 46, 'hashemi_taba': 46}, 'rouhani': {'rouhani': 85, 'mirsalim': 63, 'hashemi_taba': 32, 'reisi': 51, 'ghalibaf': 9, 'jahangiri': 4}, 'ghalibaf': {'mirsalim': 56, 'hashemi_taba': 36, 'rouhani': 21, 'jahangiri': 5, 'reisi': 71, 'ghalibaf': 72}}
+precisions:
+mirsalim: 0.29896907216494845
+hashemi_taba: 0.3308270676691729
+reisi: 0.37723214285714285
+jahangiri: 0.7540983606557377
+rouhani: 0.480225988700565
+ghalibaf: 0.6153846153846154
+average: 0.47612287457203038333333333333333
+recall:
+mirsalim: 0.5686274509803921
+hashemi_taba: 0.4512820512820513
+reisi: 0.6259259259259259
+jahangiri: 0.1625441696113074
+rouhani: 0.3483606557377049
+ghalibaf: 0.27586206896551724
+average: 0.40543372041714980666666666666667
+
+
+
+train: dirty    test:dirty
+{'mirsalim': {'mirsalim': 113, 'hashemi_taba': 13, 'reisi': 25, 'rouhani': 21, 'ghalibaf': 32, 'jahangiri': 3}, 'hashemi_taba': {'hashemi_taba': 92, 'rouhani': 18, 'reisi': 43, 'ghalibaf': 24, 'jahangiri': 8, 'mirsalim': 8}, 'reisi': {'hashemi_taba': 24, 'ghalibaf': 26, 'reisi': 164, 'rouhani': 32, 'mirsalim': 10, 'jahangiri': 11}, 'jahangiri': {'reisi': 49, 'ghalibaf': 40, 'hashemi_taba': 34, 'rouhani': 63, 'jahangiri': 84, 'mirsalim': 20}, 'rouhani': {'rouhani': 120, 'jahangiri': 12, 'ghalibaf': 26, 'mirsalim': 25, 'reisi': 35, 'hashemi_taba': 30}, 'ghalibaf': {'rouhani': 23, 'mirsalim': 11, 'reisi': 34, 'ghalibaf': 170, 'hashemi_taba': 14, 'jahangiri': 7}}
+precisions:
+mirsalim: 0.6042780748663101
+hashemi_taba: 0.4444444444444444
+reisi: 0.4685714285714286
+jahangiri: 0.672
+rouhani: 0.4332129963898917
+ghalibaf: 0.5345911949685535
+average: 0.52618302320677138333333333333333
+
+recall:
+mirsalim: 0.5458937198067633
+hashemi_taba: 0.47668393782383417
+reisi: 0.6142322097378277
+jahangiri: 0.2896551724137931
+rouhani: 0.4838709677419355
+ghalibaf: 0.6563706563706564
+average: 0.511117777315801695
+
+
+train :mega_dirty   test:mega_dirty
+{'mirsalim': {'mirsalim': 134, 'hashemi_taba': 5, 'reisi': 16, 'ghalibaf': 31, 'rouhani': 13, 'jahangiri': 2}, 'hashemi_taba': {'hashemi_taba': 84, 'ghalibaf': 24, 'rouhani': 41, 'jahangiri': 9, 'mirsalim': 15, 'reisi': 23}, 'reisi': {'reisi': 140, 'ghalibaf': 56, 'mirsalim': 15, 'rouhani': 26, 'hashemi_taba': 12, 'jahangiri': 20}, 'jahangiri': {'ghalibaf': 46, 'jahangiri': 102, 'hashemi_taba': 27, 'rouhani': 58, 'mirsalim': 33, 'reisi': 22}, 'rouhani': {'mirsalim': 19, 'rouhani': 146, 'hashemi_taba': 14, 'ghalibaf': 40, 'jahangiri': 17, 'reisi': 10}, 'ghalibaf': {'ghalibaf': 194, 'reisi': 22, 'rouhani': 30, 'hashemi_taba': 6, 'mirsalim': 9, 'jahangiri': 5}}
+precisions:
+mirsalim: 0.5955555555555555
+hashemi_taba: 0.5675675675675675
+reisi: 0.6008583690987125
+jahangiri: 0.6580645161290323
+rouhani: 0.46496815286624205
+ghalibaf: 0.4961636828644501
+average: 0.563862974013593325
+
+recall:
+mirsalim: 0.6666666666666666
+hashemi_taba: 0.42857142857142855
+reisi: 0.5204460966542751
+jahangiri: 0.3541666666666667
+rouhani: 0.5934959349593496
+ghalibaf: 0.7293233082706767
+average: 0.54877835029817720833333333333333

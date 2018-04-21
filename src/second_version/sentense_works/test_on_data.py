@@ -40,25 +40,49 @@ def train_once():
         yaroo_tokeni = do_all_to_text(yaroo_text)
         yaroo_normali = normalize_and_stem_text(yaroo_tokeni)
         yaroo_cleani = delete_stop_words(yaroo_normali)
-        yaroo_bag[yaroo] = yaroo_tokeni[1]
-        return [yaroo_list, yaroo_bag]
+        yaroo_bag[yaroo] = yaroo_cleani[1]
+
+    return [yaroo_list, yaroo_bag]
 
 
 if __name__ == "__main__":
     result = []
     sum_result = {}
     n = 1
-    for i in range(n):
+    for i in range(10):
         generate("../../../resource/raw_data/")
         res = train_once()
         result.append(test_once(res[0], res[1]))
-    # for test_case in result:
-    #     for namzad in test_case.keys():
-    #         print(namzad)
-    #         sum_result[namzad] = {}
-    #         for choices in test_case[namzad].keys():
-    #             print(test_case[namzad])
-    #             sum_result[namzad][choices] = sum_result[namzad].get(choices, 0) + test_case[namzad][choices]
-#
-# print(sum_result)
+    for test_case in result:
+        for namzad in test_case.keys():
+            print(namzad)
+            sum_result[namzad] = sum_result.get(namzad, {})
+            for choices in test_case[namzad].keys():
+                print(test_case[namzad])
+                sum_result[namzad][choices] = sum_result[namzad].get(choices, 0) + test_case[namzad][choices]
+
+print(sum_result)
+# print("accuracy:")
 # print_accuracy(sum_result)
+yaroo_list = ["mirsalim", "hashemi_taba", "reisi", "jahangiri", "rouhani", "ghalibaf"]
+
+precision = {}
+for yaroo in yaroo_list:
+    is_yaroo = sum_result[yaroo].get(yaroo, 0)
+    all_yaroo = 0
+    for yaroo2 in yaroo_list:
+        all_yaroo += sum_result[yaroo2].get(yaroo, 0)
+    precision[yaroo] = is_yaroo / all_yaroo
+print("precisions:")
+for i in precision.keys():
+    print(str(i) + ": " + str(precision[i]))
+
+recall = {}
+for yaroo in yaroo_list:
+    is_yaroo = sum_result[yaroo].get(yaroo, 0)
+    all_yaroo = sum(sum_result[yaroo].values())
+    recall[yaroo] = is_yaroo / all_yaroo
+print("recall:")
+for i in recall.keys():
+    print(str(i) + ": " + str(recall[i]))
+#
