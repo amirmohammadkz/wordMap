@@ -69,6 +69,8 @@ def loadFirstTexts():
         main_word_repeat = {k: raw_word_repeat.get(k, 0) + main_word_repeat.get(k, 0) for k in
                             set(main_word_repeat) | set(raw_word_repeat)}
     return main_word_repeat
+
+
 def loadSecondTexts():
     main_word_repeat = {}
     raw_word_repeats = []
@@ -82,6 +84,8 @@ def loadSecondTexts():
         main_word_repeat = {k: raw_word_repeat.get(k, 0) + main_word_repeat.get(k, 0) for k in
                             set(main_word_repeat) | set(raw_word_repeat)}
     return main_word_repeat
+
+
 def loadThirdTexts():
     main_word_repeat = {}
     raw_word_repeats = []
@@ -183,6 +187,8 @@ def saveWordRepeat(sorted_list):
     for wordTuple in sorted_list:
         bw.write(wordTuple[0] + " " + str(wordTuple[1]) + "\n")
     bw.close()
+
+
 def saveWordRepeatForWordCloud(sorted_list):
     bw = open("word_repeat_word_cloud", "w", encoding="utf8")
     for wordTuple in sorted_list:
@@ -191,7 +197,7 @@ def saveWordRepeatForWordCloud(sorted_list):
     bw.close()
 
 
-def create_word_cloud():
+def create_word_cloud(x="result.png"):
     f = open("word_repeat_word_cloud", encoding="utf8")
     text = f.read()
 
@@ -218,6 +224,7 @@ def create_word_cloud():
     stopwords = add_stop_words(['می‌شود'])
     stopwords = add_stop_words(['می‌شویم'])
     stopwords = add_stop_words(['می‌شوید'])
+    stopwords = add_stop_words(['اینها'])
     # Generate a word cloud image
     wordcloud = PersianWordCloud(
         only_persian=True,
@@ -234,38 +241,40 @@ def create_word_cloud():
     # Display the generated image:
     image = wordcloud.to_image()
     image.show()
-    image.save('result.png')
+    image.save(x)
     f.close()
 
-main_word_repeat = loadRouhaniTexts()
-# for word in main_word_repeat:
-#     if"دستگاهاها" in word:
-#         print(word)
-root_word_repeat = {}
-# ps = PersianStemmer()
-for word in main_word_repeat.keys():
-    # root_word = ps.run(word)
-    root_word = word
-    if not re.match(r"[\d*]،[\d*]", root_word):
-        root_word = root_word.replace("،", "")
-    if not re.match(r"[\d*]\.[\d*]", root_word):
-        root_word = root_word.replace(".", "")
-    root_word = root_word.replace("؟", "")
-    root_word = root_word.replace("؛", "")
-    root_word = root_word.replace(":", "")
-    # if root_word != word:
-    #     print(word + "-> " + root_word)
-    # if re.match(r".*اید$",root_word):
-    #     print(root_word)
 
-    root_word_repeat[root_word] = root_word_repeat.get(root_word, 0) + main_word_repeat[word]
+if __name__ == "__main__":
+    main_word_repeat = loadAllTexts()
+    # for word in main_word_repeat:
+    #     if"دستگاهاها" in word:
+    #         print(word)
+    root_word_repeat = {}
+    # ps = PersianStemmer()
+    for word in main_word_repeat.keys():
+        # root_word = ps.run(word)
+        root_word = word
+        if not re.match(r"[\d*]،[\d*]", root_word):
+            root_word = root_word.replace("،", "")
+        if not re.match(r"[\d*]\.[\d*]", root_word):
+            root_word = root_word.replace(".", "")
+        root_word = root_word.replace("؟", "")
+        root_word = root_word.replace("؛", "")
+        root_word = root_word.replace(":", "")
+        # if root_word != word:
+        #     print(word + "-> " + root_word)
+        # if re.match(r".*اید$",root_word):
+        #     print(root_word)
 
-# for word in root_word_repeat.keys():
-#     if "یم" in word:
-#         print(word)
-pruned_words = remove_extra_words(root_word_repeat)
-sorted_x = sorted(pruned_words.items(), key=operator.itemgetter(1))
-saveWordRepeat(sorted_x)
-saveWordRepeatForWordCloud(sorted_x)
-create_word_cloud()
-# print(sorted_x)
+        root_word_repeat[root_word] = root_word_repeat.get(root_word, 0) + main_word_repeat[word]
+
+    # for word in root_word_repeat.keys():
+    #     if "یم" in word:
+    #         print(word)
+    pruned_words = remove_extra_words(root_word_repeat)
+    sorted_x = sorted(pruned_words.items(), key=operator.itemgetter(1))
+    saveWordRepeat(sorted_x)
+    saveWordRepeatForWordCloud(sorted_x)
+    create_word_cloud()
+    # print(sorted_x)
