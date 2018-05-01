@@ -11,7 +11,7 @@ def test_once(yaroo_list, yaroo_bag):
     for yaroo in yaroo_list:
         print("yaroo:" + yaroo)
         yaroo_test[yaroo] = {}
-        file = load_text("../../../resource/raw_data/" + yaroo + "_all_test.txt")
+        file = load_text("../../../resource/raw_data/" + yaroo + "_all_train.txt")
         # sentence = input("your sentence: ")
         for sentence in file.split("\n"):
             if sentence == "":

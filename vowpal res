@@ -1,0 +1,57 @@
+1 gram hinge loss
+reisi: {'TP': 17, 'TN': 16, 'FP': 9, 'FN': 7}
+precision: 0.6538461538461539
+recall: 0.7083333333333334
+rouhani: {'TP': 16, 'TN': 17, 'FP': 7, 'FN': 9}
+precision: 0.6956521739130435
+recall: 0.64
+
+2 gram hinge loss
+reisi: {'TP': 16, 'TN': 17, 'FP': 8, 'FN': 8}
+precision: 0.6666666666666666
+recall: 0.6666666666666666
+rouhani: {'TP': 17, 'TN': 16, 'FP': 8, 'FN': 8}
+precision: 0.68
+recall: 0.68
+
+3 gram hinge loss
+reisi: {'TP': 14, 'TN': 16, 'FP': 9, 'FN': 10}
+precision: 0.6086956521739131
+recall: 0.5833333333333334
+rouhani: {'TP': 16, 'TN': 14, 'FP': 10, 'FN': 9}
+precision: 0.6153846153846154
+recall: 0.64
+
+
+1 gram logistic loss
+reisi: {'TP': 17, 'TN': 16, 'FP': 9, 'FN': 7}
+precision: 0.6956521739130435
+recall: 0.64
+rouhani: {'TP': 16, 'TN': 17, 'FP': 7, 'FN': 9}
+precision: 0.6956521739130435
+recall: 0.64
+
+2 gram logistic loss
+reisi: {'TP': 15, 'TN': 18, 'FP': 7, 'FN': 9}
+precision: 0.6666666666666666
+recall: 0.72
+rouhani: {'TP': 18, 'TN': 15, 'FP': 9, 'FN': 7}
+precision: 0.6666666666666666
+recall: 0.72
+
+3 gram logistic loss
+reisi: {'TP': 14, 'TN': 18, 'FP': 7, 'FN': 10}
+precision: 0.6428571428571429
+recall: 0.72
+rouhani: {'TP': 18, 'TN': 14, 'FP': 10, 'FN': 7}
+precision: 0.6428571428571429
+recall: 0.72
+
+
+2 gram logistic loss after1
+reisi: {'TP': 16, 'TN': 16, 'FP': 9, 'FN': 8}
+precision: 0.6666666666666666
+recall: 0.64
+rouhani: {'TP': 16, 'TN': 16, 'FP': 8, 'FN': 9}
+precision: 0.6666666666666666
+recall: 0.64

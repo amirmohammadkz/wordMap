@@ -17,8 +17,8 @@ def replace_space_with_nimspace(text):
     text = text.replace(" های ", "های ")
     text = text.replace(" می ", " می‌")
     text = text.replace(" نمی ", " نمی‌")
-    text = text.replace("\n", " ")
-    text = text.replace("\r", " ")
+    text = text.replace("\n", " . ")
+    text = text.replace("\r", " . ")
     # todo fix ای
     # if re.match(r".*[^،.!] ای .*", text) and not re.match(r".*[،.!] ای .*", text):
     #     text.replace(" ای", "‌ای")

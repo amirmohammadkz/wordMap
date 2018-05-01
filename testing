@@ -1,4 +1,4 @@
-train: clean    test:dirty
+train: clean    test:after2
 {'mirsalim': {'reisi': 3, 'rouhani': 1, 'mirsalim': 13, 'hashemi_taba': 2}, 'hashemi_taba': {'hashemi_taba': 11, 'mirsalim': 6, 'reisi': 1, 'rouhani': 1}, 'reisi': {'reisi': 18, 'mirsalim': 4, 'hashemi_taba': 3, 'rouhani': 1}, 'jahangiri': {'mirsalim': 9, 'hashemi_taba': 7, 'ghalibaf': 1, 'reisi': 4, 'jahangiri': 5, 'rouhani': 2}, 'rouhani': {'mirsalim': 2, 'hashemi_taba': 8, 'rouhani': 7, 'reisi': 4, 'jahangiri': 2, 'ghalibaf': 1}, 'ghalibaf': {'reisi': 4, 'ghalibaf': 12, 'hashemi_taba': 5, 'mirsalim': 2, 'jahangiri': 1, 'rouhani': 3}}
 mirsalim:68.42105263157895
 hashemi_taba:57.89473684210526
@@ -16,7 +16,7 @@ jahangiri:14.285714285714286
 rouhani:29.166666666666668
 ghalibaf:29.62962962962963
 
-train: dirty    test:clean
+train: after2    test:clean
 {'mirsalim': {'ghalibaf': 14, 'hashemi_taba': 4, 'mirsalim': 1}, 'hashemi_taba': {'ghalibaf': 9, 'hashemi_taba': 8, 'rouhani': 2}, 'reisi': {'ghalibaf': 19, 'hashemi_taba': 3, 'rouhani': 3, 'reisi': 1}, 'jahangiri': {'rouhani': 3, 'ghalibaf': 19, 'hashemi_taba': 6}, 'rouhani': {'ghalibaf': 16, 'hashemi_taba': 4, 'rouhani': 4}, 'ghalibaf': {'hashemi_taba': 1, 'ghalibaf': 23, 'rouhani': 3}}
 mirsalim:5.2631578947368425
 hashemi_taba:42.10526315789474
@@ -25,7 +25,7 @@ jahangiri:0.0
 rouhani:16.666666666666668
 ghalibaf:85.18518518518519
 
-train: dirty    test:dirty
+train: after2    test:after2
 {'mirsalim': {'ghalibaf': 3, 'mirsalim': 11, 'rouhani': 1, 'hashemi_taba': 3, 'reisi': 1}, 'hashemi_taba': {'rouhani': 4, 'hashemi_taba': 11, 'mirsalim': 4}, 'reisi': {'reisi': 17, 'ghalibaf': 3, 'rouhani': 2, 'hashemi_taba': 2, 'mirsalim': 1, 'jahangiri': 1}, 'jahangiri': {'reisi': 5, 'jahangiri': 9, 'rouhani': 5, 'ghalibaf': 3, 'mirsalim': 3, 'hashemi_taba': 3}, 'rouhani': {'rouhani': 12, 'hashemi_taba': 3, 'reisi': 2, 'mirsalim': 2, 'jahangiri': 2, 'ghalibaf': 3}, 'ghalibaf': {'reisi': 8, 'rouhani': 3, 'hashemi_taba': 1, 'ghalibaf': 15}}
 mirsalim:57.89473684210526
 hashemi_taba:57.89473684210526
@@ -34,7 +34,7 @@ jahangiri:32.142857142857146
 rouhani:50.0
 ghalibaf:55.55555555555556
 
-train :mega_dirty   test:mega_dirty
+train :after1   test:after1
 {'mirsalim': {'mirsalim': 17, 'reisi': 2, 'ghalibaf': 2, 'jahangiri': 1}, 'hashemi_taba': {'reisi': 3, 'rouhani': 2, 'hashemi_taba': 10, 'mirsalim': 3, 'jahangiri': 1}, 'reisi': {'reisi': 16, 'mirsalim': 1, 'hashemi_taba': 2, 'ghalibaf': 7, 'jahangiri': 2, 'rouhani': 2}, 'jahangiri': {'mirsalim': 3, 'jahangiri': 8, 'hashemi_taba': 5, 'ghalibaf': 6, 'rouhani': 3, 'reisi': 2}, 'rouhani': {'rouhani': 18, 'ghalibaf': 4, 'hashemi_taba': 2, 'reisi': 1, 'mirsalim': 1}, 'ghalibaf': {'ghalibaf': 23, 'rouhani': 1, 'jahangiri': 1}}
 mirsalim:77.27272727272727
 hashemi_taba:52.63157894736842
