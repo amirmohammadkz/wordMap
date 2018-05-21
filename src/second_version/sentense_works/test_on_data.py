@@ -1,8 +1,8 @@
-from second_version.word_works.tokenizer import do_all_to_text, load_text
-from second_version.word_works.normalizer import normalize_and_stem_text
-from second_version.sentense_works.naive_bayes import naive_bayes_classify, get_root_of_sentence
-from second_version.word_works.stop_word_deleter import delete_stop_words
-from resource.raw_data.test_train_generator import generate
+from word_map.src.second_version.word_works.tokenizer import do_all_to_text, load_text
+from word_map.src.second_version.word_works.normalizer import normalize_and_stem_text
+from word_map.src.second_version.sentense_works.naive_bayes import naive_bayes_classify, get_root_of_sentence
+from word_map.src.second_version.word_works.stop_word_deleter import delete_stop_words
+from  word_map.resource.raw_data.test_train_generator import generate
 import operator
 
 
@@ -38,9 +38,9 @@ def train_once():
     for yaroo in yaroo_list:
         yaroo_text = load_text("../../../resource/raw_data/" + yaroo + "_all_train.txt")
         yaroo_tokeni = do_all_to_text(yaroo_text)
-        yaroo_normali = normalize_and_stem_text(yaroo_tokeni)
-        yaroo_cleani = delete_stop_words(yaroo_normali)
-        yaroo_bag[yaroo] = yaroo_cleani[1]
+        # yaroo_normali = normalize_and_stem_text(yaroo_tokeni)
+        # yaroo_cleani = delete_stop_words(yaroo_normali)
+        yaroo_bag[yaroo] = yaroo_tokeni[1]
 
     return [yaroo_list, yaroo_bag]
 

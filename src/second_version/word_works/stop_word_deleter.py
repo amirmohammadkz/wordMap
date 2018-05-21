@@ -1,4 +1,4 @@
-from second_version.word_works.tokenizer import load_text
+from word_map.src.second_version.word_works.tokenizer import load_text
 
 
 def delete_stop_words(normalized):
@@ -8,7 +8,8 @@ def delete_stop_words(normalized):
     word_repeat_no_useless = {}
     for word in word_repeat.keys():
         if word in stop_words:
-            text = text.replace(word, "")
+            for i in range(len(text)):
+                text[i] = text[i].replace(" " + word + " ", " ")
         else:
             word_repeat_no_useless[word] = word_repeat.get(word)
     return [text, word_repeat_no_useless]

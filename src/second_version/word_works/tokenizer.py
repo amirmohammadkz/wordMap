@@ -74,6 +74,13 @@ def do_all_to_text(text):
     return [text_nimspace_ok, word_repeat_no_extra]
 
 
+def do_all_to_text2(text):
+    text_nimspace_ok = replace_space_with_nimspace(text)
+    word_repeat = text2token(text_nimspace_ok)
+    word_repeat_no_extra = remove_extras_from_token(word_repeat)
+    return [text_nimspace_ok.split("."), word_repeat_no_extra]
+
+
 if __name__ == "__main__":
     text = load_text("../../../resource/raw_data/ghalibaf.txt")
     text_nimspace_ok = replace_space_with_nimspace(text)
