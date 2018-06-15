@@ -24,7 +24,7 @@ def get_prob_in_bag(sentence: str, bag_of_words: dict, alpha: bool):
     else:
         alpha = 0
     for word in sentence.split(" "):
-        probability *= ((bag_of_words.get(word, 0) + alpha) / (sum(bag_of_words.values()) + d))
+        probability *= ((bag_of_words.get(word, 0) + alpha) / (sum(bag_of_words.values()) + d*alpha))
         # print(word)
         # print(probability)
     return probability
